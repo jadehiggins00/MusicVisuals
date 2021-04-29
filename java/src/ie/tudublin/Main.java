@@ -3,6 +3,7 @@ package ie.tudublin;
 import example.CubeVisual;
 import example.MyVisual;
 import example.RotatingAudioBands;
+import example.WaveForm;
 
 public class Main
 {	
@@ -12,6 +13,8 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new MyVisual());		
 	}
+
+	
 
 	public static void main(String[] args)
 	{

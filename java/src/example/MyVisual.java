@@ -31,6 +31,8 @@ public class MyVisual extends Visual
         
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
+
+        
     }
 
     public void keyPressed()
