@@ -12,7 +12,7 @@ public class MyVisual extends Visual
 
     public void settings()
     {
-        size(1000, 1000);
+        size(1000, 1000,P3D);
         
         // Use this to make fullscreen
     //fullScreen();
