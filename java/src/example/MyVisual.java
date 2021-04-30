@@ -1,18 +1,21 @@
 package example;
 
 import ie.tudublin.*;
+import C19365731.*;
 
 public class MyVisual extends Visual
 {    
     WaveForm wf;
     AudioBandsVisual abv;
+    Spirals s;
+    int which =0;
 
     public void settings()
     {
-        size(1024, 500);
+        size(1000, 1000);
         
         // Use this to make fullscreen
-        //fullScreen();
+    //fullScreen();
 
         // Use this to make fullscreen and use P3D for 3D graphics
         //fullScreen(P3D, SPAN); 
@@ -23,7 +26,7 @@ public class MyVisual extends Visual
         startMinim();
                 
         // Call loadAudio to load an audio file to process 
-        loadAudio("heroplanet.mp3");   
+        loadAudio("violence.mp3");   
 
         
         // Call this instead to read audio from the microphone
@@ -31,14 +34,24 @@ public class MyVisual extends Visual
         
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
+        s = new Spirals(this);
     }
 
     public void keyPressed()
     {
+        if (keyCode >= '0' && keyCode <= '7') {
+            which = keyCode - '0';
+        }
         if (key == ' ')
         {
-            getAudioPlayer().cue(0);
-            getAudioPlayer().play();
+            if(getAudioPlayer().isPlaying()){
+                getAudioPlayer().pause();
+            }
+            else{
+                getAudioPlayer().rewind();
+                getAudioPlayer().play();
+            }
+           
         }
     }
 
@@ -55,11 +68,12 @@ public class MyVisual extends Visual
             e.printStackTrace();
         }
         // Call this is you want to use frequency bands
-        calculateFrequencyBands(); 
+       // calculateFrequencyBands(); 
 
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();        
-        wf.render();
-        abv.render();
+        // wf.render();
+        // abv.render();
+        s.render();
     }
 }
