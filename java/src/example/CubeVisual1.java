@@ -1,10 +1,14 @@
 package example;
 
+import C19365731.MyVisual;
 import ie.tudublin.Visual;
 
 public class CubeVisual1 extends Visual
 {
-    public void settings()
+    public CubeVisual1(MyVisual myVisual) {
+	}
+
+	public void settings()
     {
         size(800, 600, P3D);
         //fullScreen(P3D, SPAN);
