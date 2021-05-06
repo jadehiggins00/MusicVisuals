@@ -40,7 +40,7 @@ public class MyVisual extends Visual {
         startMinim();
 
         // Call loadAudio to load an audio file to process
-        loadAudio("violence.mp3");
+        loadAudio("4aem.mp3");
 
         // Call this instead to read audio from the microphone
         // startListening();

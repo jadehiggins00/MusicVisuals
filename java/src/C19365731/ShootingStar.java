@@ -27,7 +27,7 @@ public class ShootingStar extends GameObject {
             mv.pushMatrix();
             for (int i = 0; i < 55; i++) {
                 float c = PApplet.map(i, 0, 500, 130, 255) % 255.0f;
-                mv.strokeWeight(3);
+                mv.strokeWeight(2);
                 mv.stroke(c, 255, 255, 100);
                 float theta = i * (thetaInc + mv.getSmoothedAmplitude() * 5);
                 mv.pushMatrix();
@@ -49,7 +49,7 @@ public class ShootingStar extends GameObject {
             mv.pushMatrix();
             for (int i = 0; i <55; i++) {
                 float c = PApplet.map(i, 0, 500, 100, 255) % 255.0f;
-                mv.strokeWeight(3);
+                mv.strokeWeight(2);
                 mv.stroke(c, 255, 255, 100);
                 float theta = i * (thetaInc + mv.getSmoothedAmplitude() * 5);
                 mv.pushMatrix();
@@ -72,7 +72,7 @@ public class ShootingStar extends GameObject {
             mv.pushMatrix();
             for (int i = 0; i < 55; i++) {
                 float c = PApplet.map(i, 0, 500, 200, 255) % 255.0f;
-                mv.strokeWeight(3);
+                mv.strokeWeight(2);
                 mv.stroke(c, 255, 255, 100);
                 float theta = i * (thetaInc + mv.getSmoothedAmplitude() * 5);
                 mv.pushMatrix();
