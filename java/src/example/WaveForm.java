@@ -5,9 +5,11 @@ import processing.core.*;
 // This is an example of a visual that renders the waveform
 public class WaveForm
 {
-    MyVisual mv;
+    MyVisual mv; //reference to the MyVisual Class
+
     float cy = 0;
 
+    //constructor blah
     public WaveForm(MyVisual mv)
     {
         this.mv = mv;

@@ -14,17 +14,29 @@ public abstract class GameObject {
     float halfWidth = w/2;
     float dx, dy;
     int which =0;
+   
+    
+
+    
+   
 
     
 
 
+
+
     //master constructor
-    public GameObject(MyVisual mv, float x, float y, float rotation) {
+    public GameObject(MyVisual mv, float x, float y, float rotation){
         this.mv = mv;
         this.x = x;
         this.y = y;
         this.rotation = rotation;
+       
+        
+       
     }
+
+ 
 
     //GETTERS AND SETTERS
     public float getX() {
@@ -46,11 +58,18 @@ public abstract class GameObject {
     public void setHalfWidth(float halfWidth) {
         this.halfWidth = halfWidth;
     }
+  
+
+
+    
+
 
     
     /* 
     subclasses must implement these abstract methods, otherwise  they will be abstract
     */
+
+  
 
     //abstract methods
     // this means any class that extends game object must include these methods

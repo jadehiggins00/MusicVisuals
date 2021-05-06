@@ -24,11 +24,11 @@ public class TreeSpirals extends GameObject{
         float r = 1f;
         float thetaInc = PApplet.TWO_PI / (float) numPoints;
         int spiralSize;
-        spiralSize =220;
+        spiralSize =500;
 
         // drawing the branches
     
-        //float c = PApplet.map(mv.getSmoothedAmplitude(), 0, 1, 0, 255);
+      // float c = PApplet.map(mv.getSmoothedAmplitude(), 0, 1, 0, 255);
         // mv.strokeWeight(1);
         // mv.stroke(255);
         // mv.line(500,900,500,500 );// right line
@@ -47,23 +47,23 @@ public class TreeSpirals extends GameObject{
       
 
       
-     
-        float lastX = 250,lastY = 280;
+     mv.pushMatrix();
+        float lastX = x,lastY = y;
         for (int i = 0; i < spiralSize; i++) {
-            float c = PApplet.map(i, 0, 500, 0, 255) % 255.0f;
-            mv.strokeWeight(1);
+            float c = PApplet.map(i, 0, 500, 20, 255) % 255.0f;
+            mv.strokeWeight(2);
             mv.stroke(c, 255, 255, 100);
             float theta = i * (thetaInc + mv.getSmoothedAmplitude() * 5);
             mv.pushMatrix();
-            x = 240 + PApplet.sin(theta) * r;
-            y = 260 - PApplet.cos(theta) * r;
+            x = x + PApplet.sin(theta) * r;
+            y = y - PApplet.cos(theta) * r;
             r += 0.8f + mv.getSmoothedAmplitude();
 
             mv.fill(0);
             
             //mv.rotate(r);
             //mv.ellipse(0,0, x, y);
-         
+            mv.translate(lastX,lastY);
             mv.line(lastX, lastY, x, y);
             lastX = x;
             lastY = y;
@@ -72,7 +72,7 @@ public class TreeSpirals extends GameObject{
 
         } /// end loop
 
-
+        mv.popMatrix();
       
 
     }//end method
@@ -82,24 +82,24 @@ public class TreeSpirals extends GameObject{
         dx = PApplet.sin(rotation);
         dy =  - PApplet.cos(rotation);
         
-        if (mv.checkKey(PApplet.UP))
-        {
-            x += dx * speed;
-            y += dy * speed;
-        }
-        if (mv.checkKey(PApplet.DOWN))
-        {
-            x -= dx * speed;
-            y -= dy * speed;
-        }
-        if (mv.checkKey(PApplet.LEFT))
-        {
-            rotation -= 0.1f;
-        }
-        if (mv.checkKey(PApplet.RIGHT))
-        {
-            rotation += 0.1f;
-        }  
+        // if (mv.checkKey(PApplet.UP))
+        // {
+        //     x += dx * speed;
+        //     y += dy * speed;
+        // }
+        // if (mv.checkKey(PApplet.DOWN))
+        // {
+        //     x -= dx * speed;
+        //     y -= dy * speed;
+        // }
+        // if (mv.checkKey(PApplet.LEFT))
+        // {
+        //     rotation -= 0.1f;
+        // }
+        // if (mv.checkKey(PApplet.RIGHT))
+        // {
+        //     rotation += 0.1f;
+        // }  
 
     }//end update method
 }//end class

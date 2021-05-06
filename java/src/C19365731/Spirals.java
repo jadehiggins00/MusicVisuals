@@ -21,7 +21,7 @@ public class Spirals extends GameObject {
         float r = 1f;
         float thetaInc = PApplet.TWO_PI / (float) numPoints;
 
-        // -------- THIRD LOOP ------
+        // -------- FIRST LOOP ------
         mv.pushMatrix();
         for (int i = 0; i < 75; i++) {
             float c = PApplet.map(i, 0, 500, 130, 210) % 255.0f;
@@ -43,7 +43,7 @@ public class Spirals extends GameObject {
         } /// end loop
         mv.popMatrix();
 
-        // -------- FOURTH LOOP ------
+        // -------- SECOND LOOP ------
         mv.pushMatrix();
         for (int i = 0; i < 45; i++) {
             float c = PApplet.map(i, 0, 500, 199, 225) % 255.0f;
@@ -65,7 +65,7 @@ public class Spirals extends GameObject {
         } /// end loop
         mv.popMatrix();
 
-        // -------- FIFTH LOOP ------
+        // -------- THIRD LOOP ------
         mv.pushMatrix();
         for (int i = 0; i < 65; i++) {
             float c = PApplet.map(i, 0, 500, 240, 255) % 255.0f;
@@ -87,7 +87,7 @@ public class Spirals extends GameObject {
         } /// end loop
         mv.popMatrix();
 
-        // -------- SIXTH LOOP ------
+        // -------- FOURTH LOOP ------
         mv.pushMatrix();
         for (int i = 0; i < 55; i++) {
             float c = PApplet.map(i, 0, 500, 0, 255) % 255.0f;
