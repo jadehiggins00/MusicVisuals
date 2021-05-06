@@ -17,9 +17,10 @@ public class MyVisual extends Visual {
 
     Spirals s;
     Flower f;
-    TreeSpirals ts;
-    RocketShip rs;
+    Sun sun;
+    RocketShip rocket;
     ShootingStar e;
+    Asteroid a;
 
     ArrayList<GameObject> gameObjects = new ArrayList<GameObject>();
     int which = 0;
@@ -32,6 +33,7 @@ public class MyVisual extends Visual {
 
         // Use this to make fullscreen and use P3D for 3D graphics
         // fullScreen(P3D, SPAN);
+
     }
 
     public void setup() {
@@ -43,7 +45,7 @@ public class MyVisual extends Visual {
         // Call this instead to read audio from the microphone
         // startListening();
 
-        rs = new RocketShip(this, height / 2, width / 2);
+        rocket = new RocketShip(this);
 
         // gameObjects.add(rs);
         // gameObjects.add(new Flower(this));
@@ -56,8 +58,12 @@ public class MyVisual extends Visual {
         abv = new AudioBandsVisual(this);
         s = new Spirals(this);
         f = new Flower(this);
-        ts = new TreeSpirals(this);
+        sun = new Sun(this);
         e = new ShootingStar(this);
+        a = new Asteroid(this);
+
+        gameObjects.add(rocket);
+        gameObjects.add(new Asteroid(this));
     }
 
     public  boolean twocubes=false;
@@ -125,19 +131,20 @@ public class MyVisual extends Visual {
 
             case 2: {
                 calculateAverageAmplitude();
-                // rs.render();
-                 ts.render();
-                // // rs.update();
+                
+                //calling the rocketship
+                // rocket.render();
+                // rocket.update();
 
-                // gameObjects.add(rs);
-                // gameObjects.add(ts);
+                //calling the spiral 
+                sun.render();
+                sun.update();
 
-                // // going backwards -> iterate
-                // for (int i = gameObjects.size() - 1; i >= 0; i--) {
-                //     GameObject b = gameObjects.get(i);
-                //     b.update();
-                //     b.render();
-                // } // end for
+                //calling the asteroid
+            //     a.render();
+            //    a.update();
+                //ts.update();
+            
 
             } // end case 2
             break;
@@ -165,7 +172,7 @@ public class MyVisual extends Visual {
 
     public void checkCollisions() {
         // checking collisions between the spiral and the rocketship
-        if (dist(rs.getX(), rs.getY(), ts.getX(), ts.getY()) < ts.getHalfWidth() + rs.getHalfWidth()) {
+        if (dist(rocket.getX(), rocket.getY(), ts.getX(), ts.getY()) < ts.getHalfWidth() + rocket.getHalfWidth()) {
             System.out.println("HIT");
         } // end if
     }

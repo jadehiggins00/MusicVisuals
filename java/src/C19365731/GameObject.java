@@ -14,7 +14,7 @@ public abstract class GameObject {
     float halfWidth = w/2;
     float dx, dy;
     int which =0;
-   
+    float lastX, lastY;
     
 
     
