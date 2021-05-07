@@ -5,11 +5,9 @@ import processing.core.*;
 
 public class Flower extends GameObject {
 
- 
-
     // constructor
     public Flower(MyVisual mv) {
-        super(mv,0,0,0);
+        super(mv, 0, 0, 0);
     }// end constructor
 
     public void render() {
@@ -36,7 +34,6 @@ public class Flower extends GameObject {
 
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
-            // mv.rotate(diagonal);
             mv.ellipse(0, 0, x, y);
 
             mv.popMatrix();
@@ -62,7 +59,6 @@ public class Flower extends GameObject {
             angle = 2.5f;
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
-            // mv.rotate(r);
             mv.rotate(diagonal);
             mv.ellipse(0, 0, x, y);
 
@@ -73,13 +69,12 @@ public class Flower extends GameObject {
 
         // -------- First PURPLE Petal ------
         mv.pushMatrix();
-        // angle = 3.0f;
         for (int i = 0; i < 45; i++) {
             float c = PApplet.map(i, 0, 500, 200, 225) % 255.0f;
             mv.strokeWeight(2);
             mv.stroke(c, 255, 255, 100);
             float theta = i * (thetaInc + mv.getSmoothedAmplitude() * 5);
-            float diagonal = PApplet.PI /  (float)angle;
+            float diagonal = PApplet.PI / (float) angle;
             mv.pushMatrix();
             x = 110 + PApplet.sin(theta) * r;
             y = 800 - PApplet.cos(theta) * r;
@@ -87,7 +82,6 @@ public class Flower extends GameObject {
             angle = 3.5f;
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
-            // rotate(r);
             mv.rotate(diagonal);
             mv.ellipse(0, 0, x, y);
 
@@ -112,7 +106,6 @@ public class Flower extends GameObject {
             angle = -2.5f;
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
-            // rotate(r);
             mv.rotate(diagonal);
             mv.ellipse(0, 0, x, y);
 
@@ -123,13 +116,13 @@ public class Flower extends GameObject {
 
         // -------- Second PINK Petal ------
         mv.pushMatrix();
-        // angle = 3.0f;
         for (int i = 0; i < 45; i++) {
             float c = PApplet.map(i, 0, 500, 230, 225) % 255.0f;
             mv.strokeWeight(2);
             mv.stroke(c, 255, 255, 100);
             float theta = i * (thetaInc + mv.getSmoothedAmplitude() * 5);
             float diagonal = PApplet.PI / (float) angle;
+
             mv.pushMatrix();
             x = 110 + PApplet.sin(theta) * r;
             y = 800 - PApplet.cos(theta) * r;
@@ -137,10 +130,8 @@ public class Flower extends GameObject {
             angle = -3.5f;
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
-            // rotate(r);
             mv.rotate(diagonal);
             mv.ellipse(0, 0, x, y);
-
             mv.popMatrix();
 
         } /// end loop
@@ -148,7 +139,6 @@ public class Flower extends GameObject {
 
         // -------- Third PURPLE Petal ------
         mv.pushMatrix();
-        // angle = 3.0f;
         for (int i = 0; i < 45; i++) {
             float c = PApplet.map(i, 0, 500, 200, 225) % 255.0f;
             mv.strokeWeight(2);
@@ -162,8 +152,7 @@ public class Flower extends GameObject {
             angle = -8.0f;
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
-            // rotate(r);
-             mv.rotate(diagonal);
+            mv.rotate(diagonal);
             mv.ellipse(0, 0, x, y);
 
             mv.popMatrix();
@@ -173,7 +162,6 @@ public class Flower extends GameObject {
 
         // -------- Third PINK Petal ------
         mv.pushMatrix();
-        // angle = 3.0f;
         for (int i = 0; i < 45; i++) {
             float c = PApplet.map(i, 0, 500, 230, 225) % 255.0f;
             mv.strokeWeight(2);
@@ -187,8 +175,7 @@ public class Flower extends GameObject {
             angle = 8.0f;
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
-            // rotate(r);
-             mv.rotate(diagonal);
+            mv.rotate(diagonal);
             mv.ellipse(0, 0, x, y);
 
             mv.popMatrix();
@@ -196,28 +183,27 @@ public class Flower extends GameObject {
         } /// end loop
         mv.popMatrix();
 
-
         // CENTRE OF FLOWER BLUE PART
         mv.pushMatrix();
 
         for (int i = 0; i < 75; i++) {
-        float c = PApplet.map(i, 0, 500, 140, 255) % 255.0f;
-        mv.strokeWeight(3);
-        mv.stroke(c, 255, 255, 100);
-        float theta = i * (thetaInc + mv.getSmoothedAmplitude() * 5);
-        float diagonal = PApplet.PI / (float) angle;
-        mv.pushMatrix();
-        x = 30 + PApplet.sin(theta) * r;
-        y = 30 - PApplet.cos(theta) * r;
-        r += 0.5f + mv.getSmoothedAmplitude();
+            float c = PApplet.map(i, 0, 500, 140, 255) % 255.0f;
+            mv.strokeWeight(3);
+            mv.stroke(c, 255, 255, 100);
+            float theta = i * (thetaInc + mv.getSmoothedAmplitude() * 5);
 
-        mv.fill(0);
-        mv.translate(mv.height / 2, mv.width / 2);
-        // mv.rotate(diagonal);
-        mv.rotate(r);
-        mv.ellipse(0, 0, x, y);
+            mv.pushMatrix();
+            x = 30 + PApplet.sin(theta) * r;
+            y = 30 - PApplet.cos(theta) * r;
+            r += 0.5f + mv.getSmoothedAmplitude();
 
-        mv.popMatrix();
+            mv.fill(0);
+            mv.translate(mv.height / 2, mv.width / 2);
+    
+            mv.rotate(r);
+            mv.ellipse(0, 0, x, y);
+
+            mv.popMatrix();
 
         } /// end loop
         mv.popMatrix();
@@ -226,31 +212,25 @@ public class Flower extends GameObject {
         mv.pushMatrix();
 
         for (int i = 0; i < 75; i++) {
-        float c = PApplet.map(i, 0, 500, 100, 255) % 255.0f;
-        mv.strokeWeight(2);
-        mv.stroke(c, 255, 255, 100);
-        float theta = i * (thetaInc + mv.getSmoothedAmplitude() * 5);
-        float diagonal = PApplet.PI / (float) angle;
-        mv.pushMatrix();
-        x = 50 + PApplet.sin(theta) * r;
-        y = 50 - PApplet.cos(theta) * r;
-        r += 0.5f + mv.getSmoothedAmplitude();
+            float c = PApplet.map(i, 0, 500, 100, 255) % 255.0f;
+            mv.strokeWeight(2);
+            mv.stroke(c, 255, 255, 100);
+            float theta = i * (thetaInc + mv.getSmoothedAmplitude() * 5);
+            mv.pushMatrix();
+            x = 50 + PApplet.sin(theta) * r;
+            y = 50 - PApplet.cos(theta) * r;
+            r += 0.5f + mv.getSmoothedAmplitude();
 
-        mv.fill(0);
-        mv.translate(mv.height / 2, mv.width / 2);
-        // mv.rotate(diagonal);
-        //    mv.rotate(r);
-        mv.ellipse(0, 0, x, y);
+            mv.fill(0);
+            mv.translate(mv.height / 2, mv.width / 2);
+            mv.ellipse(0, 0, x, y);
 
-        mv.popMatrix();
+            mv.popMatrix();
 
         } /// end loop
         mv.popMatrix();
 
     }// end render method
 
-    public void update(){
-
-    }//end method
 
 }// end class

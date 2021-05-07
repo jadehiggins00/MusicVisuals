@@ -3,17 +3,12 @@ package C19365731;
 import example.MyVisual;
 import processing.core.*;
 
-
 public class EllipseWaveForm extends GameObject {
 
-   
-
     public EllipseWaveForm(MyVisual mv) {
+        // referencing the GamesObject constructor
         super(mv, 0, 0, 0);
-    
-
-        // ab = ap.mix;
-    }
+    }// end constructor
 
     public void render() {
 
@@ -34,15 +29,11 @@ public class EllipseWaveForm extends GameObject {
             mv.textSize(16);
             mv.fill(255);
             mv.stroke(255);
-            
+
             mv.text("Violence ", 30, 50);
             mv.text("\nby Grimes ", 30, 50);
-        
+
         } // end if
-
-      
-
-
 
         for (int i = 0; i < 75; i++) {
             float c = PApplet.map(i, 0, 500, 130, 210) % 255.0f;
@@ -53,7 +44,6 @@ public class EllipseWaveForm extends GameObject {
             x = 700 + PApplet.sin(theta) * r;
             y = 420 - PApplet.cos(theta) * r;
             r += 0.8f + mv.getSmoothedAmplitude();
-      
 
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
@@ -153,8 +143,5 @@ public class EllipseWaveForm extends GameObject {
 
     }// endmethod
 
-    public void update() {
-
-    }
 
 }// end class

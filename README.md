@@ -17,7 +17,9 @@ I have provided a series of screenshots to compensate.
 
 # Description of the assignment
 This assignment features 6 music visualizers which are all interactively moving 
-along to the song *Violence by GRIMES* 
+along to the song *Violence by GRIMES*
+
+The Assignment uses Object Oriented Programming techniques & Principles in Java as well as the Processing Language and the minim library within the Processing Language.
 
 ## Visualizer 1: - EllipseWaveform 
 
@@ -56,7 +58,7 @@ along to the song *Violence by GRIMES*
 
 - Press the *Space Bar* to play the music and start up the music visuals!
 
-- There are 6 Visualizers and they are activated by pressing specific keys such as:
+### There are 6 Visualizers and they are activated by pressing specific keys such as:
 
 1. Option 0 (default option) displays the EllipseWaveForm Visual 
 
@@ -66,11 +68,75 @@ along to the song *Violence by GRIMES*
 
 1. Option 3 displays the Shooting Stars Visuals - Press the *UP Arrow Key* to change between the Visuals
 
-1. Option 4 displays the Interactive Hoops Visual - Move the mouse *Horizontally* across the screen to control the size of the *hoop* on screen!
+1. Option 4 displays the Interactive Hoops Visual - Move the mouse *Horizontally* across the screen to control and change the size of the *hoop* 
 
 
 
 # How it works
+
+#### The assignment has been programmed using *Object Oriented* principles such as: 
+- Polymorphism 
+- Inheritence
+- Abstract Classes and Methods  
+- Encapsulation
+- etc.
+
+The "main" class - *MyVisual*  calls the built processing methods such as 
+
+```Java
+public void draw()
+{
+	
+}//end draw method
+```
+
+```Java
+public void settings()
+{
+	
+}//end draw method
+```
+
+```Java
+public void setup()
+{
+	
+}//end draw method
+```
+In the draw() method, A switch case is used to called the various methods from other classes using instantied objects which were created in the 
+setup() method.
+
+#### For Example:
+
+```Java
+
+ShootingStar ss; //reference to the ShootingStar Class
+int option=0;
+
+public void setup()
+{
+	ss = new ShootingStar(this);
+	
+}//end draw method
+
+public void draw()
+{
+	switch(option){
+
+		case 1:{
+
+			//calling the method from the ShootingStar class
+			ss.render();
+			
+		}//end case1
+
+	}//end switch
+	
+}//end draw method
+```
+
+
+
 
 # What I am most proud of in the assignment
 

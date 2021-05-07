@@ -17,8 +17,6 @@ public class Hoops extends GameObject {
         float r = 1f;
         float thetaInc = PApplet.TWO_PI / (float) numPoints;
 
-  
-
         // --- LIGHT BLUE PART-----
         mv.pushMatrix();
         for (int i = 0; i < 45; i++) {
@@ -27,13 +25,12 @@ public class Hoops extends GameObject {
             mv.stroke(c, 255, 255, 100);
             float theta = i * (thetaInc + mv.getSmoothedAmplitude() * 5);
             mv.pushMatrix();
-            x = mv.mouseX + PApplet.sin(theta) * r; //90
+            x = mv.mouseX + PApplet.sin(theta) * r; 
             y = 90 - PApplet.cos(theta) * r;
             r += 0.8f + mv.getSmoothedAmplitude();
 
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
-            // mv.rotate(rotation);
             mv.ellipse(0, 0, x, y);
 
             mv.popMatrix();
@@ -49,13 +46,12 @@ public class Hoops extends GameObject {
             mv.stroke(c, 255, 255, 100);
             float theta = i * (thetaInc + mv.getSmoothedAmplitude() * 5);
             mv.pushMatrix();
-            x = 130 + PApplet.sin(theta) * r; //130
+            x = 130 + PApplet.sin(theta) * r; 
             y = 130 - PApplet.cos(theta) * r;
             r += 0.8f + mv.getSmoothedAmplitude();
 
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
-            // mv.rotate(rotation);
             mv.ellipse(0, 0, x, y);
 
             mv.popMatrix();
@@ -71,7 +67,7 @@ public class Hoops extends GameObject {
             mv.stroke(c, 255, 255, 100);
             float theta = i * (thetaInc + mv.getSmoothedAmplitude() * 5);
             mv.pushMatrix();
-            x = 200 + PApplet.sin(theta) * r; //200
+            x = 200 + PApplet.sin(theta) * r; 
             y = 200 - PApplet.cos(theta) * r;
             r += 0.8f + mv.getSmoothedAmplitude();
 
@@ -93,20 +89,18 @@ public class Hoops extends GameObject {
             mv.stroke(c, 255, 255, 100);
             float theta = i * (thetaInc + mv.getSmoothedAmplitude() * 5);
             mv.pushMatrix();
-            x = 260 + PApplet.sin(theta) * r; // 260
+            x = 260 + PApplet.sin(theta) * r; 
             y = 260 - PApplet.cos(theta) * r;
             r += 0.8f + mv.getSmoothedAmplitude();
 
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
-            // mv.rotate(rotation);
             mv.ellipse(0, 0, x, y);
 
             mv.popMatrix();
 
         } /// end loop
         mv.popMatrix();
-     
 
         // -------- Second HOOP ------
         mv.pushMatrix();
@@ -199,19 +193,8 @@ public class Hoops extends GameObject {
     }// end method
 
     public void update() {
-
+        // for the rotation of the hoops
         rotation += 0.01f;
-
-        int currentTime = PApplet.second();
-        int time1 = 52000;
-        if (currentTime == time1) {
-
-            mv.textSize(32);
-            mv.fill(255);
-            mv.text("Violence", 100, 70);
-
-        } // end if
-
     }// end method
 
 }// end class

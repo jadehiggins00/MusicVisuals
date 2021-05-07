@@ -9,18 +9,14 @@ import C19365731.*;
 
 public class MyVisual extends Visual {
 
-
     WaveForm wf;// referencing the waveform class - wf
 
     AudioBandsVisual abv;
 
-
     EllipseWaveForm ew;
     Flower f;
     Sun sun;
-    RocketShip rocket;
-    ShootingStar e;
-    Asteroid a;
+    ShootingStar ss;
     Hoops h;
 
     ArrayList<GameObject> gameObjects = new ArrayList<GameObject>();
@@ -35,7 +31,7 @@ public class MyVisual extends Visual {
         // Use this to make fullscreen and use P3D for 3D graphics
         // fullScreen(P3D, SPAN);
 
-    }
+    }//end mthod
 
     public void setup() {
         startMinim();
@@ -46,33 +42,23 @@ public class MyVisual extends Visual {
         // Call this instead to read audio from the microphone
         // startListening();
 
-        rocket = new RocketShip(this);
-
-        // gameObjects.add(rs);
-        // gameObjects.add(new Flower(this));
-        // gameObjects.add(new Spirals(this));
-        // gameObjects.add(new TreeSpirals(this));
-
-       wf = new WaveForm(this);
-
-
+        // objects
         abv = new AudioBandsVisual(this);
         ew = new EllipseWaveForm(this);
         f = new Flower(this);
         sun = new Sun(this);
-        e = new ShootingStar(this);
-        a = new Asteroid(this);
+        ss = new ShootingStar(this);
         h = new Hoops(this);
 
-        gameObjects.add(rocket);
-        gameObjects.add(new Asteroid(this));
-    }
 
-    public  boolean twocubes=false;
+    }// end method
+
+    public boolean twocubes = false;
+
     public void keyPressed()
 
     {
-        
+
         keys[keyCode] = true;
 
         if (keyCode >= '0' && keyCode <= '7') {
@@ -89,15 +75,11 @@ public class MyVisual extends Visual {
         } // end if
 
         if (keyCode == UP) {
-            
-            //gettwoCubes = !twoCubes;
+
             twocubes = !twocubes;
 
-            // e.getTwoCubes() = !e.getTwoCubes();
-           
-         
-        }
-    }
+        } // end if
+    }// end method
 
     public void draw() {
         background(0);
@@ -112,8 +94,7 @@ public class MyVisual extends Visual {
 
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();
-        // wf.render();
-        // abv.render();
+       
 
         switch (which) {
 
@@ -122,72 +103,52 @@ public class MyVisual extends Visual {
                 ew.render();
 
             } // end case 1
-            break;
+                break;
 
             case 1: {
                 calculateAverageAmplitude();
                 f.render();
 
             } // end case 2
-            break;
+                break;
 
             case 2: {
                 calculateAverageAmplitude();
-                
-                //calling the rocketship
-                // rocket.render();
-                // rocket.update();
 
-                //calling the spiral 
+                // calling the spiral
                 sun.render();
                 sun.update();
 
-                //calling the asteroid
-            //     a.render();
-            //    a.update();
-                //ts.update();
-            
-
             } // end case 2
-            break;
-           
+                break;
+
             case 3: {
                 pushMatrix();
                 calculateAverageAmplitude();
-                e.render();
+                ss.render();
                 popMatrix();
 
             } // end case 3
-            break;
-           
+                break;
+
             case 4: {
-                
+
                 calculateAverageAmplitude();
                 h.render();
                 h.update();
-               
 
             } // end case 3
 
-
-            break;
+                break;
 
             default: {
                 System.out.println("\n Error, this is not an option");
             } // end default
         }// end switch
 
+    }// end method
 
-       
 
-    }//end method
-
-    public void checkCollisions() {
-        // checking collisions between the spiral and the rocketship
-        if (dist(rocket.getX(), rocket.getY(), ts.getX(), ts.getY()) < ts.getHalfWidth() + rocket.getHalfWidth()) {
-            System.out.println("HIT");
-        } // end if
-    }
 
     boolean[] keys = new boolean[1024];
 
