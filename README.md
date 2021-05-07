@@ -13,7 +13,7 @@ Student Number: C19365731
 
 # Description of the assignment
 This assignment features 6 music visualizers which are all interactively moving 
-along to the song * Violence by GRIMES * 
+along to the song *Violence by GRIMES* 
 
 
 
