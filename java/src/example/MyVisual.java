@@ -21,6 +21,7 @@ public class MyVisual extends Visual {
     RocketShip rocket;
     ShootingStar e;
     Asteroid a;
+    Hoops h;
 
     ArrayList<GameObject> gameObjects = new ArrayList<GameObject>();
     int which = 0;
@@ -40,7 +41,7 @@ public class MyVisual extends Visual {
         startMinim();
 
         // Call loadAudio to load an audio file to process
-        loadAudio("4aem.mp3");
+        loadAudio("violence.mp3");
 
         // Call this instead to read audio from the microphone
         // startListening();
@@ -61,6 +62,7 @@ public class MyVisual extends Visual {
         sun = new Sun(this);
         e = new ShootingStar(this);
         a = new Asteroid(this);
+        h = new Hoops(this);
 
         gameObjects.add(rocket);
         gameObjects.add(new Asteroid(this));
@@ -154,6 +156,16 @@ public class MyVisual extends Visual {
                 calculateAverageAmplitude();
                 e.render();
                 popMatrix();
+
+            } // end case 3
+            break;
+           
+            case 4: {
+                
+                calculateAverageAmplitude();
+                h.render();
+                h.update();
+               
 
             } // end case 3
 

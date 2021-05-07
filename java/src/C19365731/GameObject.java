@@ -16,6 +16,7 @@ public abstract class GameObject {
     int which =0;
     float lastX, lastY;
     
+    
 
     
    
