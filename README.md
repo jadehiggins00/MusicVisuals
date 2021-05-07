@@ -46,6 +46,30 @@ along to the song *Violence by GRIMES*
 
 # Instructions
 
+### How to start the Visualizer:
+
+- Once the repository has been forked and cloned to a directory, open up Visual Studio Code.
+
+- Press F5 or click on the *run* button at the top right corner of the window.
+
+- The Visualizer window will open up.
+
+- Press the *Space Bar* to play the music and start up the music visuals!
+
+- There are 6 Visualizers and they are activated by pressing specific keys such as:
+
+1. Option 0 (default option) displays the EllipseWaveForm Visual 
+
+1. Option 1 displays the Flower Visual
+
+1. Option 2 displays the Rotating Spiral Visual
+
+1. Option 3 displays the Shooting Stars Visuals - Press the *UP Arrow Key* to change between the Visuals
+
+1. Option 4 displays the Interactive Hoops Visual - Move the mouse *Horizontally* across the screen to control the size of the *hoop* on screen!
+
+
+
 # How it works
 
 # What I am most proud of in the assignment
