@@ -8,6 +8,9 @@ Student Number: C19365731
 The Youtube video isnt capturing the high quality of the screen capture, However I still included the video in my submission.
 I have provided a series of screenshots to compensate.
 
+## My Youtube Video:
+[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=w5bordtpSVM)
+
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
 - Create a new package named your student number and put all your code in this package.
@@ -166,6 +169,25 @@ public abstract void render();
 ```
 
 # What I am most proud of in the assignment
+
+To be honest, I am most proud of *all* the visuals I have created specifically the first visual - *EllipseWaveForm*
+I created this visual by accidently altering with one of the in class examples and by changing the function from 
+line() to ellipse() and configuring the rotation, the radius, x & y co-ordinates and the colours! I was able to form this
+creation:
+![An image](images/EWF2.png)
+
+This Visual & the chosen song I used - *Violence* inspired the rest of my project and I tried to establish space-like visuals
+or something along the lines of that theme. My initial idea for the assignment was to create planets inside of a solar system 
+which would rotate to the music. However, I was not pleased with the execution.
+
+#### Example of first design:
+![An image](images/planets.png)
+
+
+Anyway, I enjoyed this assignment and learned alot of OOP principles & The Processing Language. Although it was frustrating at
+times and after changing my ideas/song choices over and over again 
+I can happily say that I can be satisfied with the outcome!
+
 
 # Markdown Tutorial
 
