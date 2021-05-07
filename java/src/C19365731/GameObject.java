@@ -6,7 +6,6 @@ public abstract class GameObject {
 
     MyVisual mv;
     float x;
-
     float y;
     float speed = 5;
     float rotation = 0;
@@ -17,10 +16,6 @@ public abstract class GameObject {
     float lastX, lastY;
   
     
-    
-
-
-
     //master constructor
     public GameObject(MyVisual mv, float x, float y, float rotation){
         this.mv = mv;
@@ -53,18 +48,10 @@ public abstract class GameObject {
         this.halfWidth = halfWidth;
     }
   
-
-
-    
-
-
     
     /* 
     subclasses must implement these abstract methods, otherwise  they will be abstract
     */
-
-  
-
     //abstract methods
     // this means any class that extends game object must include these methods
     public abstract void render();

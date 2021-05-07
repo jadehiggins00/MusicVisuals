@@ -135,8 +135,35 @@ public void draw()
 }//end draw method
 ```
 
+### The MyVisual Class also uses Abstract Methods and Classes for Code Reusability
 
+#### Example of Abstract Class
 
+All classes that extend to GameObject will have access to these variables.
+
+```Java
+public abstract class GameObject {
+
+    MyVisual mv;
+    float x;
+    float y;
+    float speed = 5;
+    float rotation = 0;
+    float w =50;
+    float halfWidth = w/2;
+    float dx, dy;
+    int which =0;
+    float lastX, lastY;
+
+}// end abstract class
+```
+#### Example of Abstract Method
+
+This means that any class that extends GameObject *must* include the render() method.
+
+```Java
+public abstract void render();
+```
 
 # What I am most proud of in the assignment
 
