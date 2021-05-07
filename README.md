@@ -26,7 +26,7 @@ along to the song *Violence by GRIMES*
 
 ## Visualizer 2: - Flower
 
-![An image](images/flower.png)
+![An image](images/p8.png)
 
 # Instructions
 
