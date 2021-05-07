@@ -28,6 +28,22 @@ along to the song *Violence by GRIMES*
 
 ![An image](images/f.png)
 
+## Visualizer 3: - Rotating Spiral
+
+![An image](images/spiral.png)
+
+## Visualizer 4: - Shooting Star One
+
+![An image](images/shootingStar1.png)
+
+## Visualizer 5: - Shooting Star Two
+
+![An image](images/shootingStar2.png)
+
+## Visualizer 6: - Interactive Hoops
+
+![An image](images/hoop.png)
+
 # Instructions
 
 # How it works
