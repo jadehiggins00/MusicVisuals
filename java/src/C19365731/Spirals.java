@@ -3,12 +3,14 @@ package C19365731;
 import example.MyVisual;
 import processing.core.*;
 
+
 public class Spirals extends GameObject {
 
- 
+   
 
     public Spirals(MyVisual mv) {
         super(mv, 0, 0, 0);
+    
 
         // ab = ap.mix;
     }
@@ -23,6 +25,25 @@ public class Spirals extends GameObject {
 
         // -------- FIRST LOOP ------
         mv.pushMatrix();
+
+        int currentTime = mv.millis();
+        int time1 = 16000;
+
+        if (currentTime >= time1) {
+
+            mv.textSize(16);
+            mv.fill(255);
+            mv.stroke(255);
+            
+            mv.text("Violence ", 30, 50);
+            mv.text("\nby Grimes ", 30, 50);
+        
+        } // end if
+
+      
+
+
+
         for (int i = 0; i < 75; i++) {
             float c = PApplet.map(i, 0, 500, 130, 210) % 255.0f;
             mv.strokeWeight(1);
@@ -32,6 +53,7 @@ public class Spirals extends GameObject {
             x = 700 + PApplet.sin(theta) * r;
             y = 420 - PApplet.cos(theta) * r;
             r += 0.8f + mv.getSmoothedAmplitude();
+      
 
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
@@ -131,8 +153,8 @@ public class Spirals extends GameObject {
 
     }// endmethod
 
-    public void update(){
-       
+    public void update() {
+
     }
 
 }// end class

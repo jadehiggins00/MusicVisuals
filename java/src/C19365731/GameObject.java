@@ -15,14 +15,9 @@ public abstract class GameObject {
     float dx, dy;
     int which =0;
     float lastX, lastY;
+  
     
     
-
-    
-   
-
-    
-
 
 
 
@@ -33,9 +28,7 @@ public abstract class GameObject {
         this.y = y;
         this.rotation = rotation;
        
-        
-       
-    }
+    }//end constructor
 
  
 
@@ -75,7 +68,7 @@ public abstract class GameObject {
     //abstract methods
     // this means any class that extends game object must include these methods
     public abstract void render();
-    public abstract void update();
+   
     
     
 }//enc class
