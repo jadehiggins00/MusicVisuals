@@ -23,6 +23,11 @@ along to the song *Violence by GRIMES*
 
 ![An image](images/EWF1.png)
 
+
+## Visualizer 2: - Flower
+
+![An image](images/flower.png)
+
 # Instructions
 
 # How it works
