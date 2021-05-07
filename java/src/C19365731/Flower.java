@@ -32,7 +32,7 @@ public class Flower extends GameObject {
             mv.pushMatrix();
             x = 200 + PApplet.sin(theta) * r;
             y = 200 - PApplet.cos(theta) * r;
-            r += 0.8f + mv.getSmoothedAmplitude();
+            r += 0.5f + mv.getSmoothedAmplitude();
 
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
@@ -58,7 +58,7 @@ public class Flower extends GameObject {
             mv.pushMatrix();
             x = 110 + PApplet.sin(theta) * r;
             y = 800 - PApplet.cos(theta) * r;
-            r += 0.8f + mv.getSmoothedAmplitude();
+            r += 0.5f + mv.getSmoothedAmplitude();
             angle = 2.5f;
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
@@ -83,7 +83,7 @@ public class Flower extends GameObject {
             mv.pushMatrix();
             x = 110 + PApplet.sin(theta) * r;
             y = 800 - PApplet.cos(theta) * r;
-            r += 0.8f + mv.getSmoothedAmplitude();
+            r += 0.5f + mv.getSmoothedAmplitude();
             angle = 3.5f;
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
@@ -108,7 +108,7 @@ public class Flower extends GameObject {
             mv.pushMatrix();
             x = 110 + PApplet.sin(theta) * r;
             y = 800 - PApplet.cos(theta) * r;
-            r += 0.8f + mv.getSmoothedAmplitude();
+            r += 0.5f + mv.getSmoothedAmplitude();
             angle = -2.5f;
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
@@ -133,7 +133,7 @@ public class Flower extends GameObject {
             mv.pushMatrix();
             x = 110 + PApplet.sin(theta) * r;
             y = 800 - PApplet.cos(theta) * r;
-            r += 0.8f + mv.getSmoothedAmplitude();
+            r += 0.5f + mv.getSmoothedAmplitude();
             angle = -3.5f;
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
@@ -158,7 +158,7 @@ public class Flower extends GameObject {
             mv.pushMatrix();
             x = 110 + PApplet.sin(theta) * r;
             y = 800 - PApplet.cos(theta) * r;
-            r += 0.8f + mv.getSmoothedAmplitude();
+            r += 0.5f + mv.getSmoothedAmplitude();
             angle = -8.0f;
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
@@ -183,7 +183,7 @@ public class Flower extends GameObject {
             mv.pushMatrix();
             x = 100 + PApplet.sin(theta) * r;
             y = 790 - PApplet.cos(theta) * r;
-            r += 0.8f + mv.getSmoothedAmplitude();
+            r += 0.5f + mv.getSmoothedAmplitude();
             angle = 8.0f;
             mv.fill(0);
             mv.translate(mv.height / 2, mv.width / 2);
@@ -209,7 +209,7 @@ public class Flower extends GameObject {
         mv.pushMatrix();
         x = 30 + PApplet.sin(theta) * r;
         y = 30 - PApplet.cos(theta) * r;
-        r += 0.8f + mv.getSmoothedAmplitude();
+        r += 0.5f + mv.getSmoothedAmplitude();
 
         mv.fill(0);
         mv.translate(mv.height / 2, mv.width / 2);
@@ -234,7 +234,7 @@ public class Flower extends GameObject {
         mv.pushMatrix();
         x = 50 + PApplet.sin(theta) * r;
         y = 50 - PApplet.cos(theta) * r;
-        r += 0.8f + mv.getSmoothedAmplitude();
+        r += 0.5f + mv.getSmoothedAmplitude();
 
         mv.fill(0);
         mv.translate(mv.height / 2, mv.width / 2);

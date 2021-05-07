@@ -26,7 +26,7 @@ public class Sun extends GameObject {
         mv.pushMatrix();
         float lastX = 80, lastY = 80;
         for (int i = 0; i < spiralSize; i++) {
-            float c = PApplet.map(i, 0, 500, 10, 200) % 255.0f;
+            float c = PApplet.map(i, 0, 500, 60, 255) % 255.0f; //10,200
             mv.strokeWeight(2);
             mv.stroke(c, 255, 255, 100);
             float theta = i * (thetaInc + mv.getSmoothedAmplitude() * 5);
