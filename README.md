@@ -4,6 +4,10 @@ Name: Jade Higgins
 
 Student Number: C19365731
 
+# ****** YOUTUBE VIDEO ISSUE ********:
+The Youtube video isnt capturing the high quality of the screen capture, However I still included the video in my submission.
+I have provided a series of screenshots to compensate.
+
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
 - Create a new package named your student number and put all your code in this package.
@@ -15,7 +19,9 @@ Student Number: C19365731
 This assignment features 6 music visualizers which are all interactively moving 
 along to the song *Violence by GRIMES* 
 
+## Visualizer 1: - EllipseWaveform 
 
+![An image](images/EWF1.png)
 
 # Instructions
 

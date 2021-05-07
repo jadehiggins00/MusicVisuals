@@ -4,11 +4,11 @@ import example.MyVisual;
 import processing.core.*;
 
 
-public class Spirals extends GameObject {
+public class EllipseWaveForm extends GameObject {
 
    
 
-    public Spirals(MyVisual mv) {
+    public EllipseWaveForm(MyVisual mv) {
         super(mv, 0, 0, 0);
     
 

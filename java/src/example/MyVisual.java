@@ -15,7 +15,7 @@ public class MyVisual extends Visual {
     AudioBandsVisual abv;
 
 
-    Spirals s;
+    EllipseWaveForm ew;
     Flower f;
     Sun sun;
     RocketShip rocket;
@@ -57,7 +57,7 @@ public class MyVisual extends Visual {
 
 
         abv = new AudioBandsVisual(this);
-        s = new Spirals(this);
+        ew = new EllipseWaveForm(this);
         f = new Flower(this);
         sun = new Sun(this);
         e = new ShootingStar(this);
@@ -119,7 +119,7 @@ public class MyVisual extends Visual {
 
             case 0: {
                 calculateAverageAmplitude();
-                s.render();
+                ew.render();
 
             } // end case 1
             break;
