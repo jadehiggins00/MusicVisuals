@@ -10,7 +10,7 @@ I have provided a series of screenshots to compensate.
 
 ## My Youtube Video:
 [![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
-[![YouTube](http://img.youtube.com/watch?v=w5bordtpSVM.jpg)](https://www.youtube.com/watch?v=w5bordtpSVM)
+[![YouTube](spiral.png)](https://www.youtube.com/watch?v=w5bordtpSVM)
 
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
